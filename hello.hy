@@ -14,4 +14,3 @@
     (if self.surname
       (+ res " " self.surname)
       res)))
-
