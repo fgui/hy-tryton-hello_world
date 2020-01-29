@@ -1,11 +1,10 @@
 (import [trytond.pool [PoolMeta]])
 (import [trytond.model [fields]])
-(def --all-- ["Hello"])
+(setv --all-- ["Hello"])
 
-(defclass Hello []
+(defclass Hello [:metaclass PoolMeta]
   "Hello World with surname"
   [--name-- "hello"
-   --metaclass-- PoolMeta
    surname (.Char fields "Surname")]
 
   (defn get-greeting [self name]
